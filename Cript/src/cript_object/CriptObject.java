@@ -2,22 +2,16 @@ package cript_object;
 
 public class CriptObject {
 	
-	
-	String array[] = new String[11];
 	String mensajeOriginal;
 	String mensajeModificado;
 	String cambiosMensaje;
-	String alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ,abcdefghijklmnopqrstuvwyz12345678910,?!.,_";
-
+	public static String alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwyz12345678910?!.,_";
+	public static int desplazar;
+	
 	public CriptObject(String mensajeOriginal) {
 		this.mensajeOriginal = mensajeOriginal;
-		
-		System.out.println("Metodos de cifrado");
-		System.out.println("1-César");
-		System.out.println("2-monoalfabético ");
-		System.out.println("3-Cifrado por numeración");
-		
 	}
+	
 	
 	public String getMensajeOriginal() {
 		return mensajeOriginal;
@@ -30,4 +24,50 @@ public class CriptObject {
 	public CriptObject() {
 		
 	}
+	
+	public static String codificarCesar(String mensajeOriginal, int desplazamiento){
+	    String textoCodificado = "";
+	 
+	    mensajeOriginal = mensajeOriginal.toUpperCase();
+	 
+	    char caracter;
+	    for (int i = 0; i < mensajeOriginal.length(); i++) {
+	        caracter = mensajeOriginal.charAt(i);
+	 
+	        int pos = alfabeto.indexOf(caracter);
+	 
+	        if(pos == -1){
+	            textoCodificado += caracter;
+	        }else{
+	            textoCodificado += alfabeto.charAt( (pos + desplazamiento) % alfabeto.length() );
+	        }
+	    }
+	 
+	    return textoCodificado;
+	}
+	
+	public static String descodificar(String mensajeOriginal, int desplazamiento){
+        String textoDescodificado = "";
+        mensajeOriginal = mensajeOriginal.toUpperCase();
+ 
+        char caracter;
+        for (int i = 0; i < mensajeOriginal.length(); i++) {
+            caracter = mensajeOriginal.charAt(i);
+ 
+            int pos = alfabeto.indexOf(caracter);
+ 
+            if(pos == -1){
+                textoDescodificado += caracter;
+            }else{
+                if(pos - desplazamiento < 0){
+                    textoDescodificado += alfabeto.charAt( alfabeto.length() + (pos - desplazamiento) );
+                }else{
+                    textoDescodificado += alfabeto.charAt( (pos - desplazamiento) % alfabeto.length() );
+                }
+            }
+ 
+        }
+ 
+        return textoDescodificado;
+    }
 }
