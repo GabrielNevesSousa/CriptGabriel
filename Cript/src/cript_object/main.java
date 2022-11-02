@@ -25,7 +25,7 @@ public class main {
 		 System.out.println("Cuanto lo quieres desplazar para descodificar?");
 		 int desplazamiento2 = scan.nextInt();
 		 
-		 String texto2 = obj.descodificar(frase, desplazamiento2);
+		 String texto2 = obj.descifradoCesar(frase, desplazamiento2);
 		 System.out.println("texto descodificado " + texto2);
 	}
 
