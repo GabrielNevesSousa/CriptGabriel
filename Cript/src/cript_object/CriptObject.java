@@ -43,7 +43,7 @@ public class CriptObject {
 	        }
 	    }
 	 
-	    return textoCodificado;
+	    return textoCodificado.toUpperCase();
 	}
 	
 	  public static String descifradoCesar(String texto, int desplazamiento) {

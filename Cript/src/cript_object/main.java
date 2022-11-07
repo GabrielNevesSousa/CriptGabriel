@@ -19,7 +19,6 @@ public class main {
 				 
 				 switch(eleccion) {
 				  case 1:
-					  String condi;
 					  
 					  String resu;
 					  System.out.println("Dame una frase");
