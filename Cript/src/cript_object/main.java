@@ -7,26 +7,57 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		CriptObject obj = new CriptObject();
-		
-
 		 Scanner scan = new Scanner(System.in);
-		 
-		 System.out.println("Dame una frase");
-		 String frase = scan.next();
-		 
-		 System.out.println("Cuanto lo quieres desplazar?");
-		 int desplazamiento = scan.nextInt();
-		 
-		 String texto = obj.codificarCesar(frase, desplazamiento);
 		
-		System.out.println("Texto codificado " + texto);
+		System.out.println("1- Codificar en cesar");
+		System.out.println("2- Codificar en monoalfabetico");
+		System.out.println("3- Codificar en polialfabetico");
+		int eleccion = 0;
 		
-		 System.out.println("Cuanto lo quieres desplazar para descodificar?");
-		 int desplazamiento2 = scan.nextInt();
+		
+		 eleccion = scan.nextInt();
+				 
+				 switch(eleccion) {
+				  case 1:
+					  String condi;
+					  
+					  String resu;
+					  System.out.println("Dame una frase");
+					 String frase = scan.next();
+					 
+					 System.out.println("Cuanto lo quieres desplazar?");
+					 int desplazamiento = scan.nextInt();
+					 
+					 String texto = CriptObject.codificarCesar(frase, desplazamiento);
+					
+					System.out.println("Texto codificado " + texto);
+					
+					resu = texto;
+					
+					System.out.println("Cuanto lo quieres desplazar para descodificar?");
+					
+					int desplazamiento2 = scan.nextInt();
+					
+					resu = CriptObject.descifradoCesar(resu, desplazamiento2);
+					
+					System.out.println("texto descodificado " + resu);
+				    break;
+				  case 2:
+				    // code block
+				    break;
+				  default:
+				    // code block
+				};
 		 
-		 String texto2 = obj.descifradoCesar(frase, desplazamiento2);
-		 System.out.println("texto descodificado " + texto2);
+		
+		
+		
+		
+		// System.out.println("Cuanto lo quieres desplazar para descodificar?");
+		 //int desplazamiento2 = scan.nextInt();
+		 
+		// condi = CriptObject.descifradoCesar(frase, desplazamiento2);
+		// System.out.println("texto descodificado " + condi);
 	}
 
 }
