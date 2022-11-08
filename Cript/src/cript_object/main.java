@@ -51,7 +51,6 @@ public class main {
 		
 		
 		
-		
 		// System.out.println("Cuanto lo quieres desplazar para descodificar?");
 		 //int desplazamiento2 = scan.nextInt();
 		 

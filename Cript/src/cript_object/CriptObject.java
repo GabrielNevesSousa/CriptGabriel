@@ -4,8 +4,7 @@ public class CriptObject {
 	
 	String mensajeOriginal;
 	String mensajeModificado;
-	String cambiosMensaje;
-	public static String alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwyz12345678910?!.,_";
+		public static String alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwyz12345678910?!.,_";
 	public static int desplazar;
 	
 	public CriptObject(String mensajeOriginal) {
@@ -70,5 +69,15 @@ public class CriptObject {
 		    }
 		 
 		    return textoDescodificado;
+		    
+		    
 	    }
-}
+	  
+	  public void codificarMonoalfabetico() {
+		  
+	  }
+		
+	public void descifradoMonoalfabetico() {
+	}
+	
+	}
