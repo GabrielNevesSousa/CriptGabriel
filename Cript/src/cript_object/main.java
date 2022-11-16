@@ -42,20 +42,16 @@ public class main {
 					System.out.println("texto descodificado " + resu);
 				    break;
 				  case 2:
-				    // code block
+				   
 				    break;
 				  default:
-				    // code block
+				    
 				};
 		 
 		
 		
 		
-		// System.out.println("Cuanto lo quieres desplazar para descodificar?");
-		 //int desplazamiento2 = scan.nextInt();
-		 
-		// condi = CriptObject.descifradoCesar(frase, desplazamiento2);
-		// System.out.println("texto descodificado " + condi);
+		
 	}
 
 }

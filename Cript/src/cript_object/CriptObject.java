@@ -4,7 +4,7 @@ public class CriptObject {
 	
 	String mensajeOriginal;
 	String mensajeModificado;
-		public static String alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwyz12345678910?!.,_";
+	public static String alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwyz12345678910?!.,_";
 	public static int desplazar;
 	
 	public CriptObject(String mensajeOriginal) {
@@ -24,6 +24,8 @@ public class CriptObject {
 		
 	}
 	
+	
+	//CodificarCesar
 	public static String codificarCesar(String mensajeOriginal, int desplazamiento){
 	    String textoCodificado = "";
 	 
@@ -45,6 +47,7 @@ public class CriptObject {
 	    return textoCodificado.toUpperCase();
 	}
 	
+	//DescodificarCesar
 	  public static String descifradoCesar(String texto, int desplazamiento) {
 		  String textoDescodificado = "";
 		  
@@ -73,8 +76,24 @@ public class CriptObject {
 		    
 	    }
 	  
-	  public void codificarMonoalfabetico() {
+	  
+	  
+	  public void codificarMonoalfabetico(String clave) {
 		  
+		  String mnsj_encrip = "";
+			
+			
+			String ClaveFinal = "";
+			for(int x = 0 ; x < clave.length() ; x++) {
+				if(!ClaveFinal.contains(String.valueOf(clave.charAt(x)))) {
+					ClaveFinal = ClaveFinal.concat(String.valueOf(clave.charAt(x)));
+				}
+			}
+			
+			
+			String alfabetoLimpio = ClaveFinal;
+			
+		
 	  }
 		
 	public void descifradoMonoalfabetico() {
